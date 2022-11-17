@@ -32,8 +32,8 @@
             }
         }
         .nav__options {
-            list-style-type: none;
             display: none;
+            list-style-type: none;
             position: absolute;
             margin-top: 180px;
             background-color: variables.$white-color;
@@ -61,15 +61,6 @@
         }
     }
 }
-    #nav__checkbox:checked ~ ul.nav__options {
-        display: block;
-    }
-    #nav__checkbox:checked ~ label.nav__toggle .closedmenu {
-        display: block;
-    }
-    #nav__checkbox:checked ~ label.nav__toggle .openmenu {
-        display: none;
-    }
 @media (min-width: 1000px) {
     .navbar__container {
         .topbar__container {

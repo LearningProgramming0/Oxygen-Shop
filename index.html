@@ -18,10 +18,10 @@
                     <h1 class="logo">OXYGEN Shop</h1>
                     <input type="checkbox" name="" id="nav__checkbox" class="nav__checkbox">
                     <label for="nav__checkbox" class="nav__toggle">
-                        <img class= "openmenu" src="images/openmenu.svg" alt="Open menu">
-                        <img class= "closedmenu" src="images/closedmenu.svg" alt="Closed menu">    
+                        <img id="openmenu" class= "openmenu" src="images/openmenu.svg" alt="Open menu">
+                        <img id="closedmenu" class= "closedmenu" src="images/closedmenu.svg" alt="Closed menu">    
                     </label>
-                    <ul class="nav__options">
+                    <ul id= "nav__options" class="nav__options">
                         <li class="nav__list"><a class="nav__list__a" href="#why-us">WHY US</a></li>
                         <li class="nav__list"><a class="nav__list__a" href="#benefits">BENEFITS</a></li>
                         <li class="nav__list"><a class="nav__list__a" href="#prices">PRICES</a></li>
@@ -30,6 +30,7 @@
                 </div>
             </nav>
         </header>
+        <hr class="scrollbar">
         <!--MAIN-->
         <!--WHY-US-->
         <main>
@@ -97,11 +98,16 @@
         <!--PRICING-->
             <section class="conditions" id="prices">
                 <h2 class="pricing__title">Pricing</h2>
+                <select class="pricing__select">
+                    <option value="usd">USD - $</option>
+                    <option value="eur">EUR - €</option>
+                    <option value="gbp">GBP - £</option>
+                </select>
                 <div class="pricing__box">
                     <div class="pricing__container red">
                         <div class="pricing__category">
                             <h2 class="pricing__rate">Basic</h2>
-                            <p class="pricing__ammount">$0</p>
+                            <p class="pricing__ammount pricing__basic">$0</p>
                         </div>
                         <div class="pricing__dates">
                             <div class="pricing__info">
@@ -132,7 +138,7 @@
                     <div class="pricing__container blue">
                         <div class="pricing__category">
                             <h2 class="pricing__rate">Professional</h2>
-                            <p class="pricing__ammount">$25</p>
+                            <p class="pricing__ammount pricing__professional">$25</p>
                             <p class="pricing__offer">Limited offer</p>
                         </div>
                         <div class="pricing__dates">
@@ -164,7 +170,7 @@
                     <div class="pricing__container cyan">
                         <div class="pricing__category">
                             <h2 class="pricing__rate">Premium</h2>
-                            <p class="pricing__ammount">$60</p>
+                            <p class="pricing__ammount pricing__premium">$60</p>
                             <p class="pricing__offer">Limited offer</p>
                         </div>
                         <div class="pricing__dates">
@@ -195,6 +201,25 @@
                     </div>
                 </div>
             </section>
+        <!--SLIDER-->
+        <div id="slider" class="slider">
+            <img class="slider__img slider__img-operational" src="images/slider/camfire.jpg" alt="Cooking with a campfire">
+            <img class="slider__img" src="images/slider/lake.jpg" alt="A lake in a valley">
+            <img class="slider__img" src="images/slider/starfish.jpg" alt="A starfish resting on a rock by the sea">
+            <img class="slider__img" src="images/slider/sunset.jpg" alt="Sunset in a country house">
+            <img class="slider__img" src="images/slider/walterlily.jpg" alt="A water lily in a lake">
+            <div class="arrow arrow-right"></div>
+            <div class="arrow arrow-left"></div>
+            <div class="slider__button__container">
+                <div class="slider__button__list">
+                    <button class="slider__button slider__button-active"></button>
+                    <button class="slider__button"></button>
+                    <button class="slider__button"></button>
+                    <button class="slider__button"></button>
+                    <button class="slider__button"></button>
+                </div>
+            </div>
+        </div>        
         <!--CONTACT-->
             <section class="communication" id="contact">
                 <div class="contact__init">
@@ -237,5 +262,27 @@
                 <a href="https://facebook.com/"><img class="facebook" src="images/facebook.svg" alt="Facebook"></a>
             </div>
         </footer>
+        <!--POPUP-->
+        <div class="popup__container">
+            <div class="popup">
+                <h1 class="popup__cross">X</h1>
+                <h2 class="popup__title">Subscribe to our Newsletter</h2>
+                <form action="" class="popup__form">
+                    <label for="email">Email:</label>
+                        <input id="popup__email" class="popup__email" type="email" name="email" required>
+                    <div class="popup__conditions">
+                        <label for="conditions"></label>
+                            <input id="popup__checkbox" class="popup__checkbox" type="checkbox" name="conditions" required>
+                            <p class="popup__textcheck">I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process under the European Parliament’s and Council of the European Union Regulation on the Protection of Natural Persons as of 27 April 2016, with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (Data Protection Directive).
+                    </div>
+                    <label for="popup__submit"></label>
+                        <input id="popup__submit" class="popup__submit" type="submit" name="submit" value="Send">
+                </form>
+            </div>
+        </div>
+        <!--RETURNTOP-->
+        <button class="return__button"><img class="return__img" src="images/returntop.svg"></button>
+        <!--JAVASCRIPT-->
+        <script src="js/index.js" type="module"></script>
     </body>
 </html>
