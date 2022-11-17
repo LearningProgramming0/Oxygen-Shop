@@ -1,4 +1,3 @@
-@use "variables";
 .communication {
     display: block;
     position: relative;
@@ -134,15 +133,14 @@
                 font-size: 1em;
                 font-weight: 600;
                 color: variables.$grey-color;
-                margin-left: -13%;
+                margin-left: -12%;
                 .contact__email {
-                    width: 30%;
                     .contact__icon {
                         margin-right: 5%;
                     }
                 }
                 .contact__phone {
-                    width: 30%;
+                    width: 40%;
                     padding-bottom: 10px;
                     .contact__icon {
                         margin-right: 5%;
