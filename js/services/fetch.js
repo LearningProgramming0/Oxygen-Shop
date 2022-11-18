@@ -1,4 +1,4 @@
-import {URL_POST_FORM, URL_CURRENCY_EXCHANGE, REGEXP_DECIMALS, PRICES} from "../variables/constants.js";
+import {URL_POST_FORM, URL_CURRENCY_EXCHANGE, REGEXP_DECIMALS, PRICES} from "../utils/constants.js";
 /*FetchData*/
 const fetchData = (bodyData) => {
     return (

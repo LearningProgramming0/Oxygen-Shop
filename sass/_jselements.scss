@@ -31,6 +31,7 @@
         height: 100%;
         width: 100%;
         object-fit: contain;
+        animation: slide 16s infinite alternate ease-in-out;
     }
     .slider__img-operational {
         display: block;
@@ -80,6 +81,16 @@
             }
         }
     }
+}
+@keyframes slide {
+    0% {margin-right: 0%;}
+    20% {margin-right: 0%;}
+    25% {margin-right: -100%;}
+    45% {margin-right: -100%;}
+    50% {margin-right: -200%;}
+    70% {margin-right: -200%;}
+    75% {margin-right: -300%;}
+    95% {margin-right: -300%;}
 }
 /*ReturnButton*/
 .return__button {

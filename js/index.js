@@ -1,5 +1,5 @@
 import {fetchData, changeCoin} from "./services/fetch.js";
-import {EMAIL_REGEX} from "./variables/constants.js";
+import {EMAIL_REGEX} from "./utils/constants.js";
 /*BurgerMenu*/
 document.getElementById("nav__checkbox").addEventListener("click", function () {
   if (document.getElementById("nav__options").style.display == "block") {
@@ -187,18 +187,26 @@ function nextSlide(n) {
       index = slides.length - 1;
   }
   showSlide(index);
+  if (index === 5) {
+      index = 0;
+  }
 }
+
 /*Show the previous photo*/
 document.querySelector(".arrow-left").addEventListener("click", () => {
   nextSlide(-1);
 })
+
 /*Show the next photo*/
 document.querySelector(".arrow-right").addEventListener("click", () => {
   nextSlide(1);
 })
+
 /*Show photo when button is clicked*/
 for (let i = 0; i < buttons.length; i++) {
   buttons[i].addEventListener("click", () => {
       showSlide(i);
   });
 };
+/*Photo transition*/
+const  photoTransition = setInterval(nextSlide, 4000, 1);
