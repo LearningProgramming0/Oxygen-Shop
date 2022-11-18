@@ -208,5 +208,6 @@ for (let i = 0; i < buttons.length; i++) {
       showSlide(i);
   });
 };
+
 /*Photo transition*/
 const  photoTransition = setInterval(nextSlide, 4000, 1);
