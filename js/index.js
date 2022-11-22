@@ -6,6 +6,7 @@ document.getElementById("nav__checkbox").addEventListener("click", function () {
     document.getElementById("nav__options").style.display = "none"
     document.getElementById("closedmenu").style.display = "none"
     document.getElementById("openmenu").style.display = "block"
+
   } else {
     document.getElementById("nav__options").style.display = "block"
     document.getElementById("closedmenu").style.display = "block"
@@ -25,7 +26,6 @@ const returnButton = document.querySelector(".return__button").addEventListener(
   setTimeout(() => {
     window.scroll({
       top: 0,
-      behavior: "smooth",
     })
   }, 200);
 });
@@ -72,7 +72,7 @@ submitButton.addEventListener("click", (e) => {
     inputCheckBox.checked = false;
     window.alert("We will contact you as soon as possible");
   } else {
-    window.alert("Fill in all the fields to send the form");
+    document.querySelector(".error__form").classList.add("error__form-active");
   }
 });
 
@@ -124,7 +124,7 @@ popupButton.addEventListener("click", (e) => {
       .then(popupContainer.classList.remove("popup__container-active"))
       window.alert("Thanks for subscribing");
   } else {
-    window.alert("Complete all the fields to subscribe correctly");
+    document.querySelector(".error__popup").classList.add("error__popup-active");
   }
 });
 

@@ -10,6 +10,7 @@
     position: fixed;
     box-shadow: 0px 3px 6px #00000029;
 }
+
 /*CurrencySelector*/
 .pricing__select {
     display: block;
@@ -17,6 +18,7 @@
     font-size: 1em;
     font-family: variables.$font-family-text;
 }
+
 /*Slider*/
 .slider {
     position: relative;
@@ -28,10 +30,9 @@
     .slider__img {
         display: none;
         margin: auto;
-        height: 100%;
+        height: 500px;
         width: 100%;
         object-fit: contain;
-        animation: slide 16s infinite alternate ease-in-out;
     }
     .slider__img-operational {
         display: block;
@@ -49,13 +50,13 @@
     }
     .arrow-right {
         position: absolute;
-        top: 45%;
+        top: 250px;
         right: 2%;
         transform: scaleX(-1);
     }
     .arrow-left {
         position: absolute;
-        top: 45%;
+        top: 250px;
         left: 2%;
     }
     .slider__button__container {
@@ -68,9 +69,9 @@
             display: flex;
             justify-content: center;
             gap: 3%;
-            padding-bottom: 2%;
+            padding-bottom: 20px;
             .slider__button {
-                width: 15px;
+                width: 0.8%;
                 height: 15px;
                 border-radius: 50%;
                 border: none;
@@ -82,16 +83,7 @@
         }
     }
 }
-@keyframes slide {
-    0% {margin-right: 0%;}
-    20% {margin-right: 0%;}
-    25% {margin-right: -100%;}
-    45% {margin-right: -100%;}
-    50% {margin-right: -200%;}
-    70% {margin-right: -200%;}
-    75% {margin-right: -300%;}
-    95% {margin-right: -300%;}
-}
+
 /*ReturnButton*/
 .return__button {
     position: fixed;
@@ -108,6 +100,7 @@
         border-radius: 50%;
     }
 }
+
 /*Popup*/
 .popup__container {
     display: block;
@@ -119,8 +112,7 @@
     z-index: -1;
 }
 .popup {
-    display: block;
-    visibility: hidden;
+    display: none;
     border: 1px solid variables.$grey-color-border;
     border-radius: 5px;
     padding: 5%;
@@ -180,18 +172,42 @@
             box-shadow: 5px 10px 14px variables.$blue-color-shadow;
             margin-top: 20px;
             margin-left: 25%;
-            padding: 10px 20px;
+            padding: 10px 10%;
         }
         .popup__submit:hover {
             background-color: variables.$blue-color-hover;
         }
+    }
+    .error__popup {
+        display: none;
+    }
+    .error__popup-active {
+        display: block;
+        font-family: variables.$font-family-text;
+        font-weight: 700;
+        color: variables.$red-color;
+        margin-top: 10px;
     }
 }
 .popup__container-active {
     z-index: 3;
 }
 .popup-active {
-    visibility: visible;
+    display: block;
+}
+
+/*ContactForm*/
+.error__form {
+    display: none;
+}
+.error__form-active {
+    display: block;
+    margin-top: -30px;
+    margin-bottom: 20px;
+    font-family: variables.$font-family-text;
+    font-weight: 700;
+    color: variables.$red-color;
+    width: 87%;
 }
 @media (min-width: 1000px) {
     .pricing__select {
@@ -206,5 +222,8 @@
                 width: 30%;
             }
         }
+    }
+    .error__form-active {
+        width: 70%;
     }
 }
